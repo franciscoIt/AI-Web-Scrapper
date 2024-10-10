@@ -2,11 +2,14 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from typing import List
 import logging
+from dotenv import load_dotenv
+import os
 
 # Initialize logger
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+load_dotenv() 
 # Define prompt template
 template = (
     "You are tasked with extracting specific information from the following text content: {dom_content}. "
@@ -18,7 +21,7 @@ template = (
 )
 
 # Initialize the model outside the function to avoid re-initializing
-model = OllamaLLM(model="llama3.2:1b")
+model = OllamaLLM(model=os.getenv('OLLAMA_MODEL', "llama3.2:1b"))
 
 def parse_with_ollama(dom_chunks: List[str], parse_description: str) -> str:
     """
