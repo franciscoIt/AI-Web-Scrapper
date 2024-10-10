@@ -22,6 +22,7 @@ def scrape_website(url: str):
     driver = init_driver()
 
     try:
+        url = normalize_url(url)
         driver.get(url)
 
         # Use WebDriverWait instead of time.sleep for better performance
@@ -34,6 +35,7 @@ def scrape_website(url: str):
 
     except Exception as e:
         print(f"Error scraping {url}: {e}")
+
     finally:
         driver.quit()
 
@@ -77,3 +79,19 @@ def clean_body(body_content: str) -> str:
 def split_dom(dom_content: str, max_length: int = 6000):
     """Splits DOM content into chunks with a maximum length."""
     return [dom_content[i:i + max_length] for i in range(0, len(dom_content), max_length)]
+
+
+def normalize_url(url: str) -> str:
+    """
+    Normalizes the given URL to ensure it starts with 'https://'.
+
+    Args:
+        url (str): The URL to normalize.
+
+    Returns:
+        str: The normalized URL with 'https://'.
+    """
+    url = url.strip()  # Remove any leading/trailing whitespace
+    if not url.startswith(('http://', 'https://')):
+        return f"https://{url}"
+    return url.replace("http://", "https://")

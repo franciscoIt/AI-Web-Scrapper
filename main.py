@@ -6,6 +6,10 @@ from scrape import (
     extract_body
 )
 from parse import parse_with_ollama
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Title of the app
 st.title("AI Web Scraper")
@@ -35,7 +39,8 @@ if st.button("Scrape Site"):
                     st.text_area("DOM Content", cleaned_content, height=300)
 
             except Exception as e:
-                st.error(f"Error scraping the website: {e}")
+                st.error(f"Error scraping the website: ¿Website exists?")
+                logger.error(e)
     else:
         st.error("Please enter a valid URL.")
 
@@ -63,6 +68,7 @@ if "dom_content" in st.session_state:
                         st.text_area("Parsed Result", result, height=300)
 
                 except Exception as e:
-                    st.error(f"Error parsing content: {e}")
+                    st.error(f"Error parsing content: ")
+                    logger.error(e)
         else:
             st.error("Please enter a description for parsing.")
