@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 # Helper to initialize driver
 def init_driver(proxy_url=None):
     """Initializes a Chrome WebDriver with optional proxy settings."""
-    chrome_driver_path = "./chromedriver"
+    chrome_driver_path = "drivers/chromedriver"
     options = Options()
 
     if proxy_url:
