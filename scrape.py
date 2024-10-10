@@ -15,7 +15,7 @@ def scrape_website(url:str):
     try:
         driver.get(url)
         html = driver.page_source
-        time.sleep(10)
+        time.sleep(5)
         return html
     except Exception as e:
         print(e)
@@ -44,7 +44,7 @@ def extract_body(html_content):
         return str(body_content)
     return ""
 
-def clean_body_content(body_content):
+def clean_body(body_content):
     soup = soup = BeautifulSoup(body_content,"html.parser")
     
     for script_or_style in soup(["script", "style"]):
@@ -54,11 +54,10 @@ def clean_body_content(body_content):
     cleaned_content = "\n".join(
         line.strip() for line in cleaned_content.splitlines() if line.strip()
         )
+    return cleaned_content
 
 
-
-
-
-if __name__=="__main__":
-    si=scrape_website_with_proxy("https://pepe.vip")
-    print(si)
+def  split_dom(dom_content,max_length=6000):
+    return[
+        dom_content[i : i + max_length] for i in range(0,len(dom_content),max_length)
+    ]
