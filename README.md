@@ -46,6 +46,7 @@ Or [download the chromedriver](https://googlechromelabs.github.io/chrome-for-tes
 cd drivers;
 wget {specific url}
 ```
+
 ![image](https://github.com/user-attachments/assets/c62099d0-88aa-4313-8cee-575a2ff6d0d2)
 
 Create the enviromental variable file
@@ -53,6 +54,7 @@ Create the enviromental variable file
 cp .env.example .env
 ```
 Default variables
+
 ![image](https://github.com/user-attachments/assets/67068406-f185-4c59-b72a-04d52bd46164)
 The app uses by default "llama3.2:1b", **with no need of .env file**.
 The .env files allows a quick way to config different ollama's versions
