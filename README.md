@@ -45,7 +45,7 @@ wget {specific url}
 ```
 ![image](https://github.com/user-attachments/assets/c62099d0-88aa-4313-8cee-575a2ff6d0d2)
 
-### Create the environment variables file:
+### (Optional) Create the environment variables file:
 By default, the app uses the "llama3.2:1b" model without needing a .env file. However, the .env file allows you to quickly configure different versions of Ollama.
 ```
 cp .env.example .env
