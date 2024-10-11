@@ -28,9 +28,25 @@ pip install -r requirements
 
 
 
-## Captcha --
-use of a service to avoid them like bright data
+## Installation --
+Clone 
+```bash
+git clone {Link of this repo};
+cd AI-Web-Scrapper;
+```
 
+Unzip 
+```bash 
+cd drivers;
+unzip chromedriver.zip; 
+mv chromedriver\ \(Copy\) chromedriver;
+```
+Or [download the chromedriver](https://googlechromelabs.github.io/chrome-for-testing/#stable)
+```bash 
+cd drivers;
+wget {specific url}
+```
+![image](https://github.com/user-attachments/assets/c62099d0-88aa-4313-8cee-575a2ff6d0d2)
 
 ### How to Use This README
 
