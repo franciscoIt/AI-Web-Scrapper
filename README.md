@@ -16,20 +16,17 @@ The **AI Web Scraper** is a Streamlit application that allows users to scrape an
 To run this application, ensure you have the following installed:
 
 - Python 3.7 or higher
-- Streamlit
-- Selenium
-- BeautifulSoup4
-- LangChain
-- Any required dependencies for web scraping (e.g., ChromeDriver for Selenium)
+- [Ollama] (https://ollama.com/download)
+- [ChromeDriver for Selenium] (https://googlechromelabs.github.io/chrome-for-testing/#stable)
 
 You can install the necessary Python packages using pip:
 
 ```bash
-pip install streamlit selenium beautifulsoup4 langchain
+pip install -r requirements
 
 ```
-https://googlechromelabs.github.io/chrome-for-testing/#stable
-```
+
+
 
 ## Captcha --
 use of a service to avoid them like bright data
