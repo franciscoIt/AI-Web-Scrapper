@@ -26,41 +26,38 @@ pip install -r requirements
 
 
 
-## Installation --
-1. Clone the repository:
+## Setup
+### Clone the repository:
 ```bash
 git clone {Link to this repo};
 cd AI-Web-Scrapper;
 ```
-
-2. Unzip the ChromeDriver:
+### Unzip the ChromeDriver:
 ```bash 
 cd drivers;
 unzip chromedriver.zip; 
 mv chromedriver\ \(Copy\) chromedriver;
 ```
-
 Or [Download the ChromeDriver manually:](https://googlechromelabs.github.io/chrome-for-testing/#stable)
 ```bash 
 cd drivers;
 wget {specific url}
 ```
-
 ![image](https://github.com/user-attachments/assets/c62099d0-88aa-4313-8cee-575a2ff6d0d2)
 
-3. Create the environment variables file:
+### Create the environment variables file:
+By default, the app uses the "llama3.2:1b" model without needing a .env file. However, the .env file allows you to quickly configure different versions of Ollama.
 ```
 cp .env.example .env
 ```
-#### Default variables
-By default, the app uses the "llama3.2:1b" model without needing a .env file. However, the .env file allows you to quickly configure different versions of Ollama.
-
 ### Ollama installation (Ubuntu)
 1. Navegate to ollama download website ([llama3.2:1b is working](https://github.com/ollama/ollama))
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ollama run {desired ollama version}
 ```
+
+
 ### How to Use This README
 
 1. Replace `https://github.com/yourusername/ai-web-scraper.git` with the actual URL of your repository.
