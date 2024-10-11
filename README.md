@@ -24,8 +24,6 @@ To run this application, ensure you have the following installed or downloaded:
 pip install -r requirements
 ```
 
-
-
 ## Setup
 ### Clone the repository:
 ```bash
@@ -45,23 +43,14 @@ wget {specific url}
 ```
 ![image](https://github.com/user-attachments/assets/c62099d0-88aa-4313-8cee-575a2ff6d0d2)
 
-### (Optional) Create the environment variables file:
-By default, the app uses the "llama3.2:1b" model without needing a .env file. However, the .env file allows you to quickly configure different versions of Ollama.
-```
-cp .env.example .env
-```
 ### Ollama installation (Ubuntu)
-1. Navegate to ollama download website ([llama3.2:1b is working](https://github.com/ollama/ollama))
-```
+1. Navegate to ollama download website for diferent OS ([llama3.2:1b is working](https://github.com/ollama/ollama))
+```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ollama run {desired ollama version}
 ```
-
-
-### How to Use This README
-
-1. Replace `https://github.com/yourusername/ai-web-scraper.git` with the actual URL of your repository.
-2. Update the `your-email@example.com` and `yourusername` placeholders with your actual contact information.
-3. Add any additional details specific to your app or any other features you might have included.
-
-This README provides a comprehensive overview of the application, making it easy for users to understand how to set it up and use it.
+### (Optional) Create the environment variables file:
+By default, the app uses the "llama3.2:1b" model without needing a .env file. However, the .env file allows you to quickly configure different versions of Ollama.
+```bash
+cp .env.example .env
+```
