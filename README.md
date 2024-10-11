@@ -16,10 +16,10 @@ The **AI Web Scraper** is a Streamlit application that allows users to scrape an
 To run this application, ensure you have the following installed:
 
 - Python 3.7 or higher
-- [Ollama](https://ollama.com/download) server installed.
+- [Ollama server](https://ollama.com/download)
 - [ChromeDriver for Selenium](https://googlechromelabs.github.io/chrome-for-testing/#stable)
 
-You can install the necessary Python packages using pip:
+Install the necessary Python packages using pip:
 
 ```bash
 pip install -r requirements
@@ -28,20 +28,20 @@ pip install -r requirements
 
 
 ## Installation --
-Clone 
+1. Clone the repository:
 ```bash
-git clone {Link of this repo};
+git clone {Link to this repo};
 cd AI-Web-Scrapper;
 ```
 
-Unzip 
+2. Unzip the ChromeDriver:
 ```bash 
 cd drivers;
 unzip chromedriver.zip; 
 mv chromedriver\ \(Copy\) chromedriver;
 ```
 
-Or [download the chromedriver](https://googlechromelabs.github.io/chrome-for-testing/#stable)
+Or [Download the ChromeDriver manually:](https://googlechromelabs.github.io/chrome-for-testing/#stable)
 ```bash 
 cd drivers;
 wget {specific url}
@@ -49,15 +49,13 @@ wget {specific url}
 
 ![image](https://github.com/user-attachments/assets/c62099d0-88aa-4313-8cee-575a2ff6d0d2)
 
-Create the enviromental variable file
+3. Create the environment variables file:
 ```
 cp .env.example .env
 ```
-Default variables
-
+### Default variables
+By default, the app uses the "llama3.2:1b" model without needing a .env file. However, the .env file allows you to quickly configure different versions of Ollama.
 ![image](https://github.com/user-attachments/assets/67068406-f185-4c59-b72a-04d52bd46164)
-The app uses by default "llama3.2:1b", **with no need of .env file**.
-The .env files allows a quick way to config different ollama's versions
 
 ### How to Use This README
 
