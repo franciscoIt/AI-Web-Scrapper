@@ -13,13 +13,12 @@ The **AI Web Scraper** is a Streamlit application that allows users to scrape an
 
 ## Requirements
 
-To run this application, ensure you have the following installed:
+To run this application, ensure you have the following installed or downloaded:
 
 - Python 3.7 or higher
 - [Ollama server](https://ollama.com/download)
 - [ChromeDriver for Selenium](https://googlechromelabs.github.io/chrome-for-testing/#stable)
-
-Install the necessary Python packages using pip:
+- Necessary Python packages. Installation using using pip:
 
 ```bash
 pip install -r requirements
@@ -56,6 +55,12 @@ cp .env.example .env
 #### Default variables
 By default, the app uses the "llama3.2:1b" model without needing a .env file. However, the .env file allows you to quickly configure different versions of Ollama.
 
+### Ollama installation (Ubuntu)
+1. Navegate to ollama download website ([llama3.2:1b is working](https://github.com/ollama/ollama))
+```
+curl -fsSL https://ollama.com/install.sh | sh
+ollama run {desired ollama version}
+```
 ### How to Use This README
 
 1. Replace `https://github.com/yourusername/ai-web-scraper.git` with the actual URL of your repository.
