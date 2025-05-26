@@ -42,6 +42,10 @@ cd drivers;
 wget {specific url}
 ```
 ![image](https://github.com/user-attachments/assets/c62099d0-88aa-4313-8cee-575a2ff6d0d2)
+![image](https://github.com/user-attachments/assets/3e045f42-440e-49e0-bfc2-4910c016b581)
+![image](https://github.com/user-attachments/assets/8ed87d98-59b9-468d-923d-db342c92a803)
+
+
 
 ### Ollama installation (Ubuntu)
 1. Navegate to ollama download website for diferent OS ([ollama github with diff versions](https://github.com/ollama/ollama))
